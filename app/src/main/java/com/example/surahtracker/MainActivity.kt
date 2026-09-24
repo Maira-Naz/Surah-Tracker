@@ -18,17 +18,30 @@ import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.card.MaterialCardView
 
 private const val NAMES = "Al-Fatihah,Al-Baqarah,Aali Imran,An-Nisa',Al-Ma'idah,Al-An'am,Al-A'raf,Al-Anfal,At-Taubah,Yunus," +
-        "Hud,Yusuf,Ar-Ra'd,Ibrahim,Al-Hijr,An-Nahl,Al-Isra',Al-Kahf,Maryam,Ta-Ha," +
-        "Al-Anbiya',Al-Haj,Al-Mu'minun,An-Nur,Al-Furqan,Ash-Shu'ara',An-Naml,Al-Qasas,Al-Ankabut,Ar-Rum," +
-        "Luqman,As-Sajdah,Al-Ahzab,Saba',Al-Fatir,Ya-Sin,As-Saffah,Sad,Az-Zumar,Ghafar," +
-        "Fusilat,Ash-Shura,Az-Zukhruf,Ad-Dukhan,Al-Jathiyah,Al-Ahqaf,Muhammad,Al-Fat'h,Al-Hujurat,Qaf," +
-        "Adz-Dzariyah,At-Tur,An-Najm,Al-Qamar,Ar-Rahman,Al-Waqi'ah,Al-Hadid,Al-Mujadilah,Al-Hashr,Al-Mumtahanah," +
-        "As-Saf,Al-Jum'ah,Al-Munafiqun,At-Taghabun,At-Talaq,At-Tahrim,Al-Mulk,Al-Qalam,Al-Haqqah,Al-Ma'arij," +
-        "Nuh,Al-Jinn,Al-Muzammil,Al-Mudaththir,Al-Qiyamah,Al-Insan,Al-Mursalat,An-Naba',An-Nazi'at,'Abasa," +
-        "At-Takwir,Al-Infitar,Al-Mutaffifin,Al-Inshiqaq,Al-Buruj,At-Tariq,Al-A'la,Al-Ghashiyah,Al-Fajr,Al-Balad," +
-        "Ash-Shams,Al-Layl,Adh-Dhuha,Al-Inshirah,At-Tin,Al-'Alaq,Al-Qadar,Al-Bayinah,Az-Zalzalah,Al-'Adiyah," +
-        "Al-Qari'ah,At-Takathur,Al-'Asr,Al-Humazah,Al-Fil,Quraish,Al-Ma'un,Al-Kauthar,Al-Kafirun,An-Nasr," +
-        "Al-Masad,Al-Ikhlas,Al-Falaq,An-Nas"
+    "Hud,Yusuf,Ar-Ra'd,Ibrahim,Al-Hijr,An-Nahl,Al-BaniIsrael',Al-Kahf,Maryam,Ta-Ha," +
+    "Al-Anbiya',Al-Haj,Al-Mu'minun,An-Nur,Al-Furqan,Ash-Shu'ara',An-Naml,Al-Qasas,Al-Ankabut,Ar-Rum," +
+    "Luqman,As-Sajdah,Al-Ahzab,Saba',Al-Fatir,Ya-Sin,As-Saffah,Sad,Az-Zumar,Ghafar," +
+    "Fusilat,Ash-Shura,Az-Zukhruf,Ad-Dukhan,Al-Jathiyah,Al-Ahqaf,Muhammad,Al-Fat'h,Al-Hujurat,Qaf," +
+    "Adz-Dzariyah,At-Tur,An-Najm,Al-Qamar,Ar-Rahman,Al-Waqi'ah,Al-Hadid,Al-Mujadilah,Al-Hashr,Al-Mumtahanah," +
+    "As-Saf,Al-Jum'ah,Al-Munafiqun,At-Taghabun,At-Talaq,At-Tahrim,Al-Mulk,Al-Qalam,Al-Haqqah,Al-Ma'arij," +
+    "Nuh,Al-Jinn,Al-Muzammil,Al-Mudaththir,Al-Qiyamah,Al-Insan,Al-Mursalat,An-Naba',An-Nazi'at,'Abasa," +
+    "At-Takwir,Al-Infitar,Al-Mutaffifin,Al-Inshiqaq,Al-Buruj,At-Tariq,Al-A'la,Al-Ghashiyah,Al-Fajr,Al-Balad," +
+    "Ash-Shams,Al-Layl,Adh-Dhuha,Al-Inshirah,At-Tin,Al-'Alaq,Al-Qadar,Al-Bayinah,Az-Zalzalah,Al-'Adiyah," +
+    "Al-Qari'ah,At-Takathur,Al-'Asr,Al-Humazah,Al-Fil,Quraish,Al-Ma'un,Al-Kauthar,Al-Kafirun,An-Nasr," +
+    "Al-Laahab,Al-Ikhlas,Al-Falaq,An-Nas"
+
+private const val URDU = "الفاتحہ,البقرہ,آل عمران,النساء,المائدہ,الانعام,الاعراف,الانفال,التوبہ,یونس," +
+    "ہود,یوسف,الرعد,ابراہیم,الحجر,النحل, بنی اسرائیل,الکہف,مریم,طٰہٰ," +
+    "الانبیاء,الحج,المؤمنون,النور,الفرقان,الشعراء,النمل,القصص,العنکبوت,الروم," +
+    "لقمان,السجدہ,الاحزاب,سبا,فاطر,یٰسٓ,الصافات,ص,الزمر,غافر," +
+    "فصلت,الشوریٰ,الزخرف,الدخان,الجاثیہ,الاحقاف,محمد,الفتح,الحجرات,ق," +
+    "الذاریات,الطور,النجم,القمر,الرحمٰن,الواقعہ,الحدید,المجادلہ,الحشر,الممتحنہ," +
+    "الصف,الجمعہ,المنافقون,التغابن,الطلاق,التحریم,الملک,القلم,الحاقہ,المعارج," +
+    "نوح,الجن,المزمل,المدثر,القیامہ,الانسان,المرسلات,النبا,النازعات,عبس," +
+    "التکویر,الانفطار,المطففین,الانشقاق,البروج,الطارق,الاعلیٰ,الغاشیہ,الفجر,البلد," +
+    "الشمس,اللیل,الضحیٰ,الانشراح,التین,العلق,القدر,البینہ,الزلزال,العادیات," +
+    "القارعہ,التکاثر,العصر,الہمزہ,الفیل,قریش,الماعون,الکوثر,الکافرون,النصر," +
+    "اللہب ,الاخلاص,الفلق,الناس"
 
 // state values
 private const val PENDING = 0
@@ -38,6 +51,16 @@ private const val PARTIAL = 2
 class MainActivity : AppCompatActivity() {
 
     private val names = NAMES.split(",")
+    private val urdu = URDU.split(",")
+    private var query = ""
+
+    // lowercase, drop spaces/punctuation/diacritics, unify Urdu/Arabic letter variants
+    private fun norm(s: String): String = s.lowercase().filter { it.isLetterOrDigit() }
+        .replace('ه', 'ہ').replace('ة', 'ہ').replace('ۃ', 'ہ')
+        .replace('ي', 'ی').replace('ى', 'ی').replace('ك', 'ک')
+        .replace('آ', 'ا').replace('أ', 'ا').replace('إ', 'ا')
+
+    private val keys = (0 until 114).map { norm(names[it] + urdu[it]) }
     private val states = IntArray(114)
     private val notes = Array(114) { "" }
     private val shown = ArrayList<Int>()      // surah indexes currently visible
@@ -68,6 +91,10 @@ class MainActivity : AppCompatActivity() {
         tvPartial = findViewById(R.id.tvPartial)
         tvPending = findViewById(R.id.tvPending)
         progress = findViewById(R.id.progress)
+        findViewById<EditText>(R.id.etSearch).doAfterTextChanged {
+            query = it.toString()
+            applyFilter()
+        }
 
         val tiles = listOf(R.id.tileDone to DONE, R.id.tilePartial to PARTIAL, R.id.tilePending to PENDING)
         for ((id, f) in tiles) {
@@ -88,7 +115,11 @@ class MainActivity : AppCompatActivity() {
 
     private fun applyFilter() {
         shown.clear()
-        shown.addAll((0 until 114).filter { filter == -1 || states[it] == filter })
+        val q = norm(query)
+        shown.addAll((0 until 114).filter {
+            (filter == -1 || states[it] == filter) &&
+                (q.isEmpty() || keys[it].contains(q) || (it + 1).toString() == q)
+        })
         adapter.notifyDataSetChanged()
         updateStats()
     }
@@ -121,6 +152,7 @@ class MainActivity : AppCompatActivity() {
             val card = v as MaterialCardView
             val num: TextView = v.findViewById(R.id.tvNumber)
             val name: TextView = v.findViewById(R.id.tvName)
+            val urdu: TextView = v.findViewById(R.id.tvUrdu)
             val cbDone: CheckBox = v.findViewById(R.id.cbDone)
             val cbPartial: CheckBox = v.findViewById(R.id.cbPartial)
             val etNote: EditText = v.findViewById(R.id.etNote)
@@ -159,6 +191,7 @@ class MainActivity : AppCompatActivity() {
             h.binding = true
             h.num.text = (i + 1).toString()
             h.name.text = names[i]
+            h.urdu.text = urdu[i]
             h.etNote.setText(notes[i])
             h.binding = false
             style(h, i)

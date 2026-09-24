@@ -45,6 +45,14 @@
                 android:textColor="#F5F0DC"
                 android:textSize="18sp"
                 android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvUrdu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:textColor="#D4AF37"
+                android:textSize="22sp" />
         </LinearLayout>
 
         <LinearLayout
