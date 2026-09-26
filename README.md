@@ -6,12 +6,13 @@ Mark each surah as **Done** or **Partial**, note exactly how much you have compl
 
 ## Screenshots
 
-## 📱 App Screenshots
-<p align="center">
-  <img src="screenshots/main.jpeg" alt="Main Screen" width="250" />
-  <img src="screenshots/search.jpeg" alt="Search Screen" width="250" />
-  <img src="screenshots/filter.jpeg" alt="Filter Screen" width="250" />
-</p>
+<table align="center">
+  <tr>
+    <td><img src="screenshots/main.jpeg" width="150" /></td>
+    <td><img src="screenshots/search.jpeg" width="150" /></td>
+    <td><img src="screenshots/filter.jpeg" width="150" /></td>
+  </tr>
+</table>
 
 ## Features
 
