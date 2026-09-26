@@ -4,6 +4,12 @@ A lightweight, offline Android app for tracking your Quran progress across all 1
 
 Mark each surah as **Done** or **Partial**, note exactly how much you have completed (for example "Ayat 1-50" or "2 Rukus"), and see at a glance how many surahs are done, partial, and still remaining.
 
+## Screenshots
+
+<img src="screenshots/main.jpeg" width="240" />
+<img src="screenshots/search.jpeg" width="240" />
+<img src="screenshots/filter.jpeg" width="240" />
+
 ## Features
 
 - All 114 surahs listed with English and Urdu names
