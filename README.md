@@ -6,11 +6,11 @@ Mark each surah as **Done** or **Partial**, note exactly how much you have compl
 
 ## Screenshots
 
-<table align="center">
+<table>
   <tr>
-    <td><img src="screenshots/main.jpeg" width="150" /></td>
-    <td><img src="screenshots/search.jpeg" width="150" /></td>
-    <td><img src="screenshots/filter.jpeg" width="150" /></td>
+    <td align="center"><img src="screenshots/main.jpeg" width="200" /><br/><sub>Main list with progress</sub></td>
+    <td align="center"><img src="screenshots/search.jpeg" width="200" /><br/><sub>Search by name or number</sub></td>
+    <td align="center"><img src="screenshots/filter.jpeg" width="200" /><br/><sub>Filtered by Partial</sub></td>
   </tr>
 </table>
 
