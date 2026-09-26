@@ -6,9 +6,20 @@ Mark each surah as **Done** or **Partial**, note exactly how much you have compl
 
 ## Screenshots
 
-<img src="screenshots/main.jpeg" width="240" />
-<img src="screenshots/search.jpeg" width="240" />
-<img src="screenshots/filter.jpeg" width="240" />
+<table>
+  <tr>
+    <td><img src="screenshots/main.jpeg" width="200"></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td><img src="screenshots/search.jpeg" width="200"></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td><img src="screenshots/filter.jpeg" width="200"></td>
+  </tr>
+</table>
 
 ## Features
 
